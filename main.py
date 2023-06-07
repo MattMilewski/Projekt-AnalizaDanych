@@ -28,8 +28,14 @@ if input_ingredients != ['']: # jesli uzytkownik cos wpisal, dokonaj filtrowania
 st.dataframe(df) # wyswietl calosc lub pofiltrowany zbior danych
 
 fig, ax = plt.subplots() # stworz miejsce na wykres
-ax.hist(df.prep_time, bins=5) # wyswietl histogram w zaleznosci od czasu przygotowania posilku w minutach
+ax.hist(df.prep_time, bins=20) # wyswietl histogram w zaleznosci od czasu przygotowania posilku w minutach
 ax.set_xlabel("Czas przygotowania w danym czasie (minuty)") # nazwij os X
 ax.set_ylabel("Ilosc produktow") # nazwij os Y
+ax.set_title("Histogram czasu przygotowania produktow") # dodaj tytul
 st.pyplot(fig) # wyswietl wykres histogramu
+
+fig2, ax2 = plt.subplots() # drugi wykres
+ax2.set_title("Wykres kolowy udzialu rodzajow dan") # dodaj tytul
+ax2 = df.course.value_counts().plot(kind='pie') # Pie chart z czestotliwoscia kolumny 'course'
+st.pyplot(fig2) # wyswietl wykres kolowy
 
