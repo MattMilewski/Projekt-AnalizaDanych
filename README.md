@@ -28,5 +28,10 @@ Plik main.py realizuje nastepujace operacje:
 16. wyswietl histogram w zaleznosci od czasu przygotowania posilku w minutach
 17. nazwij os X
 18. nazwij os Y
-19. wyswietl wykres histogramu
+19. dodaj tytul
+20. wyswietl wykres histogramu
+21. drugi wykres
+22. dodaj tytul
+23. Pie chart z czestotliwoscia kolumny 'course'
+24. wyswietl wykres kolowy
 
